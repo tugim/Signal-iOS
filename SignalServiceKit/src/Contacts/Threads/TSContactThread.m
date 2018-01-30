@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2017 Open Whisper Systems. All rights reserved.
+//  Copyright (c) 2018 Open Whisper Systems. All rights reserved.
 //
 
 #import "TSContactThread.h"
@@ -98,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)hasSafetyNumbers
 {
-    return !![[OWSIdentityManager sharedManager] identityKeyForRecipientId:self.contactIdentifier];
+    return !![[OWSIdentityManager sharedManager] identityKeyForRecipientIdWOT:self.contactIdentifier];
 }
 
 - (NSString *)name
